@@ -2751,7 +2751,23 @@ label monika_pleasure:
     m "I know you're not the kind of person that does that sort of thing."
     m "In fact, you don't even have to pleasure yourself when you can just open up this game and talk with me! Ahaha~"
     return
+    
+init 5 python:
+    for key in ['hate','hatred']:
+        monika_topics.setdefault(key,[])
+        monika_topics[key].append('monika_hate') 
 
+label monika_hate:
+    m "W-what? You hate me?"
+    m "No, of course not, you're just joking..."
+    m "Right, [currentuser]? "
+    m "{i}RIGHT?{/i}"
+    m "Oh dear. Sorry about that, I might have gotten a bit carried away there."
+    m "Of course you were joking! You love me! That's why you are with me 
+    now!"
+    m "Don't scare me like that ever again, [player]!"
+    return
+    
 ##################
 #Incomplete ideas#
 ##################
